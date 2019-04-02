@@ -21,7 +21,21 @@
     <nav class="navbar navbar-light bg-warning">
       <a href="/" class="nav-brand mx-auto">Javascript Chat</a>
     </nav>
-    <div class="container">
+    <!-- FORM DE USUARIO -->
+    <div class="card col-md-4 mt-5 mx-auto">
+      <div class="card-header">
+        <h3>Entre com o usuário</h3>
+      </div>
+      <p id="nickError"></p>
+      <div class="card-body">
+        <form id="nickForm">
+          <input type="text" class="form-control" id="nickName" />
+          <input type="submit" class="btn btn-warning btn-block mt-2" />
+        </form>
+      </div>
+    </div>
+    <!-- FORM DE MENSAGENS -->
+    <div class="container" id="contentWrap">
       <div class="col-md-6 mt-4">
         <div class="card">
           <div class="card-header">
