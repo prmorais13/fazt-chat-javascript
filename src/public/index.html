@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Chat JavaScript</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-warning">
+      <a href="/" class="nav-brand mx-auto">Javascript Chat</a>
+    </nav>
+    <div class="container">
+      <div class="col-md-6 mt-4">
+        <div class="card">
+          <div class="card-header">
+            <g4>Vamos conversar?</g4>
+          </div>
+          <div class="card-body" id="chat"></div>
+          <form class="card-footer" id="message-form">
+            <div class="input-group">
+              <input type="text" class="form-control" id="message" />
+              <div class="input-group-append">
+                <input type="submit" class="btn btn-warning" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"
+  ></script>
+  <script src="/socket.io/socket.io.js" charset="UTF-8"></script>
+  <script src="/js/main.js" charset="UTF-8"></script>
+</html>
