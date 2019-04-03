@@ -30,8 +30,7 @@ $(function() {
         nickError.html(`
           <div class="alert alert-danger">
             Este usuário já existe!
-          </div>
-        
+          </div>     
         `);
       }
 
@@ -39,7 +38,17 @@ $(function() {
     });
   });
 
-  socket.on('new message', dados => {
-    $chat.append(`${dados}<br/>`);
+  socket.on('new message', data => {
+    $chat.append(`<b>${data.nick}</b>: ${data.msg}<br/>`);
+  });
+
+  socket.on('usernames', data => {
+    let html = '';
+    for (const user of data) {
+      if (data.length > 0) {
+        html += `<p><i class="fas fa-user"></i> ${user}</p>`;
+        $users.html(html);
+      }
+    }
   });
 });
